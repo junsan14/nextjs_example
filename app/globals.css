@@ -1,0 +1,158 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.side-link {
+  @apply block px-1 py-2
+         text-sm
+         text-gray-600
+         hover:text-blue-600
+         hover:bg-blue-50
+         transition
+         break-words;
+}
+.side-link {
+  display: block;
+  font-weight: 600;
+  padding: 6px 6px;
+  border-radius: 6px;
+}
+
+.side-link.active {
+  background: #111827;
+  color: white;
+}
+
+.sub-list {
+  margin-left: 14px;
+  margin-top: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sub-link {
+  font-size: 0.9rem;
+  color: #555;
+  padding: 4px 6px;
+  border-radius: 6px;
+}
+
+.sub-link.active {
+  background: #e5e7eb;
+  color: #111;
+  font-weight: 600;
+}
+
+/* ===== Exam layout ===== */
+.exam-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 24px;
+}
+
+.exam-header h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.exam-header p {
+  margin-top: 8px;
+  color: #555;
+}
+
+.exam-section {
+  margin-top: 80px;
+}
+
+.exam-section h2 {
+  font-size: 1.3rem;
+  margin-bottom: 40px;
+}
+
+/* ===== Question ===== */
+.question {
+  margin-bottom: 80px;
+}
+
+.question h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.question-text {
+  margin-top: 16px;
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+/* ===== Code block ===== */
+.code-block {
+  margin-top: 24px;
+  background: #0f172a; /* slate-900 */
+  color: #e5e7eb;
+  padding: 20px;
+  font-family: monospace;
+  font-size: 0.9rem;
+  overflow-x: auto;
+}
+
+/* ===== Directory block ===== */
+.directory-block {
+  margin-top: 24px;
+  background: #f1f5f9; /* slate-100 */
+  color: #0f172a;
+  padding: 20px;
+  font-family: monospace;
+  font-size: 0.9rem;
+  border-left: 6px solid #64748b;
+}
+
+/* ===== Answer ===== */
+.answer-box {
+  margin-top: 28px;
+  width: 100%;
+  min-height: 160px;
+  padding: 16px;
+  font-size: 1rem;
+}
+
+.answer-toggle {
+  margin-top: 20px;
+  padding: 8px 16px;
+  border: 1px solid #333;
+  background: white;
+}
+
+.model-answer {
+  margin-top: 20px;
+  background: #f8fafc;
+  padding: 16px;
+  white-space: pre-wrap;
+  line-height: 1.7;
+}
+
+
